@@ -1,0 +1,40 @@
+input {
+    width: 500px;
+    vertical-align: top;
+    height: 24px;
+    box-sizing: border-box;
+}
+
+div {
+    margin: 8px 0;
+}
+
+button {
+    margin-right: 8px;
+}
+
+label {
+    display: block;
+}
+
+span {
+    display: inline-block;
+    vertical-align: top;
+    height: 24px;
+}
+
+.identity-controls button {
+    width: 120px;
+}
+
+#private-key {
+    display: none;
+}
+
+#private-key-container {
+    display: none;
+}
+
+#private-key-toggle {
+    width: 50px;
+}

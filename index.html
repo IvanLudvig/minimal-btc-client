@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>minimal bitcoin client</title>
+    <link rel='stylesheet' href='styles.css'>
+    <script>
+        const toggleVisibility = () => {
+            if (document.getElementById('private-key').style.display !== 'inline-block') {
+                document.getElementById('private-key').style.display = 'inline-block';
+                document.getElementById('private-key-toggle').innerText = 'hide';
+            } else {
+                document.getElementById('private-key').style.display = 'none';
+                document.getElementById('private-key-toggle').innerText = 'show';
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <script src="./bundle.js"></script>
+
+    <h1>minimal bitcoin client</h1>
+
+    <h2>identity</h2>
+    <div>
+        <label>Address</label>
+        <span id="address">no identity set</span>
+    </div>
+    <div>
+        <label>Private key (WIF)</label>
+        <input id="private-key-input"></input>
+        <span id="private-key-container">
+            <button id="private-key-toggle" onclick="toggleVisibility()">show</button>
+            <span id="private-key">
+            </span>
+        </span>
+    </div>
+    <div class="identity-controls">
+        <button id="set-identity" onclick="main.setIdentity()">set identity</button>
+        <button id="reset-identity" onclick="main.resetIdentity()">reset identity</button>
+        <button id="generate-identity" onclick="main.generateAddress()">generate identity</button>
+    </div>
+
+    <h2>Info</h2>
+    <div>
+        <button id="send" onclick="main.getBalance()">get balance</button>
+        <span id="balance">
+        </span>
+    </div>
+
+    <h2>send</h2>
+    <div>
+        <label>Destination address</label>
+        <input id="destination-input"></input>
+    </div>
+    <div>
+        <label>Amount (BTC)</label>
+        <input id="amount-input"></input>
+    </div>
+    <div>
+        <button id="send" onclick="main.send()">send</button>
+    </div>
+
+</body>
+
+</html>

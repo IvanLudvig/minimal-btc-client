@@ -1,0 +1,17 @@
+{
+  "name": "minimal-btc-client",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "module": "commonjs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bitcore-lib": "bplunkert/bitcore-lib#elliptic_bn_js_hotfix",
+    "browserify": "^17.0.0"
+  }
+}
