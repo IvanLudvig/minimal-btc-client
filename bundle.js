@@ -2,7 +2,7 @@
 (function (Buffer){(function (){
 const bitcore = require("bitcore-lib");
 bitcore.Networks.defaultNetwork = bitcore.Networks.mainnet;
-const API_URL = 'https://api.blockcypher.com/v1/btc';
+const API_URL = 'https://api.blockcypher.com/v1/btc/main';
 let state = {};
 
 exports.generateAddress = () => {
